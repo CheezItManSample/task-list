@@ -7,6 +7,8 @@ services:
 before_install:
   - nvm install --lts
 before_script:
+  - rm Gemfile.lock
+  - bundle update --bundler
   - bundle install --jobs=3 --retry=3
   - yarn
   - bundle exec rake db:create
