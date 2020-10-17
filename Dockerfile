@@ -28,3 +28,6 @@ ADD test.sh /app
 ADD test /app
 
 RUN chmod +x test.sh
+
+CMD ["/app/test.sh"]
+
